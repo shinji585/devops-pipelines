@@ -1,0 +1,26 @@
+name: CI Pipeline # define the name of the workflow 
+
+on: # define the event that triggers the workflow 
+  push:
+    branches: [ main ]
+
+jobs: # define the jobs executed in the workflow
+  build: # this is the identifier of the job
+    runs-on: ubuntu-latest # defines which operating system will execute the job
+
+    steps: # defines the sequence of tasks executed in the job 
+      - name: Checkout code # downloads the repository code into the runner 
+        uses: actions/checkout@v5 # it mean: use a prebult github action
+
+      - name: Set up Python # install python inside the runner 
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11" # pass configuration parameters to the action, it tell "install python version 3.11"
+
+      - name: Install dependencies # install the python libraries required by the project 
+        run: pip install -r requirements.txt
+
+      - name: Run tests # executes automated test 
+        run: pytest
+
+      
