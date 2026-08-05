@@ -1,0 +1,1 @@
+ALTER TABLE country DROP constraint country_continent_check;
