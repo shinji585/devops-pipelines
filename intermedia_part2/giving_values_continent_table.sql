@@ -1,2 +1,2 @@
-INSERT INTO continent (name)
-select DISTINCT continent from country order by continent asc;
+INSERT INTO language (name)
+select DISTINCT language from countrylanguage order by countrylanguage asc;

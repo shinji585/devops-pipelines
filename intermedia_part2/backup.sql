@@ -1,2 +1,2 @@
-INSERT INTO country_bk
-SELECT * FROM country;
+INSERT into countrylanguage_bk
+SELECT * FROM countrylanguage;

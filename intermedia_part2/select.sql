@@ -1,1 +1,1 @@
-SELECT * FROM country;
+SELECT * FROM countrylanguage;

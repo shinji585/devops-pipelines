@@ -1,0 +1,1 @@
+DROP TABLE countrylanguage_bk;
