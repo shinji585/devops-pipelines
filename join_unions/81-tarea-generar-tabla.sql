@@ -1,3 +1,15 @@
+SELECT count(a.*) as number_countries,
+    b.name as continent
+FROM country a
+    INNER JOIN continent b ON a.continent = b.code
+WHERE b.name NOT LIKE '%America%'
+GROUP BY b.name
+UNION
+SELECT count(a.*) as total,
+    'America'
+FROM country a
+    INNER JOIN continent b ON a.continent = b.code
+WHERE b.name LIKE '%America%';
 
 
 -- Count Union - Tarea

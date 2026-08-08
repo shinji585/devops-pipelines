@@ -1,1 +1,1 @@
-SELECT * FROM continent;
+SELECT * FROM country;
