@@ -1,0 +1,2 @@
+ALTER TABLE transformers
+DROP CONSTRAINT transformers_pkey;

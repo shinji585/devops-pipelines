@@ -1,1 +1,1 @@
-SELECT * FROM jobs;
+SELECT hire_date FROM employees;
